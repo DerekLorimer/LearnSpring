@@ -6,7 +6,7 @@ public class Hello {
 	
 	final static Logger logger = Logger.getLogger(Hello.class);
 	
-	private static int VERSION = 3;
+	private static int VERSION = 4;
 	
 	public static void main(String[] args) {
 		
