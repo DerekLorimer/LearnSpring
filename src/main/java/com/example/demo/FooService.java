@@ -14,5 +14,9 @@ public class FooService {
 		System.out.println(sayFoo.foo());
 		
 	}
+	
+	public String sayFoo() {
+		return "foo";
+	}
 
 }
