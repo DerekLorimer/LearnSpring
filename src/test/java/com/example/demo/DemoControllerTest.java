@@ -1,6 +1,8 @@
 package com.example.demo;
 
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
+import static org.hamcrest.Matchers.containsString;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,6 +23,13 @@ class DemoControllerTest {
 	void test() throws Exception {
 				
 		mockMvc.perform(get("/"));
+	}
+	
+	@Test
+	void testFoo() throws Exception {
+				
+		mockMvc.perform(get("/"))
+		.andExpect(content().string(containsString("foo")));
 	}
 
 }
