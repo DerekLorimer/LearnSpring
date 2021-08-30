@@ -9,9 +9,10 @@ class RuleTest {
 	@Test
 	void test() {
 		
-		RuleLine ruleLine = new RuleLine.RuleLineBuilder("testing").build();
+		RuleLine ruleLine = new RuleLine.RuleLineBuilder("left").addRight("right").build();
 		
-		assertEquals("testing",ruleLine.getLeft());
+		assertEquals("left",ruleLine.getLeft());
+		assertEquals("right",ruleLine.getRight());
 	}
 
 }
